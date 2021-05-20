@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--  <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/class_articulo.js"></script>
+  <script src="js/class_carrito.js"></script>
+  <style>
+  .mw-fit {
+    max-width: fit-content;
+  }
+  .w-60 {
+    width: 60%!important;
+  }
+  .w-15 {
+    width: 15%!important;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div class="container">
+  <div id="head_xl" class="row d-flex align-items-end">
+    <div class="col"><img class="img-fluid" src="img/la_para_logo_2.png" alt="La Pará"></div>
+    <div class="col"><p>Tlf: [telefono la para]</p></div>  
+  
+  </div>
+</div>
+<nav id="nav_xl" class="navbar navbar-expand-sm sticky-top" style="background-color:#1c811a">
+  <div class="col p-0">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#baguettes">Baguettes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Hamburguesas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Perritos</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Kebabs</a>
+      </li>          
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Delicias</a>
+      </li>          
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Patatas</a>
+      </li>          
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Bebidas</a>
+      </li>          
+    </ul>
+  </div>
+  <div id="carritoXL" class="col p-0 d-flex justify-content-end">
+    <span class="mb-auto badge badge-light">0</span>
+    <i class='fas fa-shopping-cart' style='font-size:36px;color:white'></i>        
+  </div>
+</nav>
+
+<nav id="nav_sm" class="navbar sticky-top navbar-dark px-1 py-0 d-none" style="background-color:#1c811a">
+  <div class="col p-0" style="max-width: fit-content;">
+    <button class="navbar-toggler" type="button" data-toggle="dropdown">
+      <span class="navbar-toggler-icon"></span>
+     </button> 
+     <div class="dropdown-menu" style="background-color:#1c811a">
+       <a class="dropdown-item text-white" href="#baguettes">Baguettes</a>
+       <a class="dropdown-item text-white" href="#">Hamburguesas</a>
+       <a class="dropdown-item text-white" href="#">Perritos</a>
+       <a class="dropdown-item text-white" href="#">Kebabs</a>
+       <a class="dropdown-item text-white" href="#">Delicias</a>
+       <a class="dropdown-item text-white" href="#">Patatas</a>
+       <a class="dropdown-item text-white" href="#">Bebidas</a>
+     </div> 
+  </div> 
+  <div class="col p-0" style="max-width: 135px;">
+    <img class="img-fluid" src="img/la_para_logo_2.png" alt="La Pará">
+  </div> 
+  <div id="carritoSM" class="col p-0 d-flex justify-content-end" style="max-width: fit-content;">
+    <span class="mb-auto badge badge-light img-fluid">0</span>
+    <i class='fas fa-shopping-cart' style='font-size:36px;color:white'></i>            
+  </div>
+</nav>
+<div id="registro" class="container">
+  <div class="row py-3 bg-light">
+    <div class="col-md-6">     
+      <div class="carousel slide" data-ride="carousel">
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="img-fluid" src="img/hamburguesas_carru.jpeg" alt="La Para Hamburguesas" width="550" height="250">
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" src="img/kebab_carru.jpeg" alt="La Para Kebab" width="550" height="250">
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" src="img/baguettes_carru.jpeg" alt="La Para Baguettes" width="550" height="250">
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="col-md-6">
+      <div><h5><b>Inicia sesión</b></h5></div>
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" placeholder="Dirección email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Contraseña</label>
+          <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Recuérdame
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Comenzar</button>
+      </form>
+      <div class="pt-3"><h5><b>No estás registrado?</b></h5></div>
+      <div class="d-inline-flex">
+        <div class="pr-3"><button id="registrar" class="btn btn-primary">Regístrate</button></div>
+        <div class="pr-3"><h6 class="mt-2"><b>O bien...</b></h6></div>
+        <div><button id="noRegistrar" class="btn btn-primary">Pide sin registrarte</button></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="baguettes" class="container mb-5">&nbsp;</div>
+<div id="contenedor" class="container" style="margin-top:30px">
+  <div class="row">
+    <picture><img src="img/baguettes_3.jpg" class="img-fluid"></picture>
+  </div>
+    <h4>Baguettes y Montaditos</h4>
+    <p>Los mejores baguettes del pueblo, sin lugar a dudas!!!</p>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <table class="table table-borderless table-striped">
+        <thead>
+          <tr class="btn d-table-row">
+            <th class= "px-1 py-1"></th>
+            <th class= "pl-0 pr-1 py-1 text-right">Mont. / Bag.</th>
+            <th class= "px-0 py-1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id= "tr1" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Lomo y Jamón</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr2" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Pollo y Jamón</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr3" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Serranito de Pollo</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr4" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Lomo Adobado y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr5" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Cochinito y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>          
+          <tr id= "tr6" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Bacon y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr7" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Carne de Kabab</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+        </tbody>
+      </table>     
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <table class="table table-borderless table-striped">
+        <thead>
+          <tr class="btn d-table-row">
+            <th class= "px-1 py-1"></th>
+            <th class= "px-1 py-1 text-right">Mont. / Bag.</th>
+            <th class= "px-0 py-1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id= "tr8" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Tortilla de Patatas</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr9" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Pollo Empanado y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">3.00€ / 4.00€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr10" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Chistorra y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>          
+          <tr id= "tr11" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Hamburguesa</td>
+            <td class= "pl-0 pr-1 py-2 text-right">3.00€ / 4.00€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr12" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">McPollo Crujiente y Queso</td>
+            <td class= "pl-0 pr-1 py-2 text-right">4.00€ / 5.00€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr13" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Baguette Criminal</td>
+            <td class= "pl-0 pr-1 py-2 text-right">2.50€ / 3.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>
+          <tr id= "tr14" class="btn d-table-row">
+            <td class="pl-1 pr-0 py-2 w-60 mw-fit text-left">Baguette a tu gusto</td>
+            <td class= "pl-0 pr-1 py-2 text-right">1.50€ / 2.50€</td>
+            <td class= "px-0 py-2"><i class="material-icons">add_box</i></td>
+          </tr>          
+        </tbody>
+      </table>     
+    </div>
+  </div>  
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+</div>
+  <!-- Registro Modal -->
+  <div class="modal fade" id="regModal">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
+      <div id="modContent" class="modal-content h-75">
+      
+        <!-- Modal Header -->
+        <div class="modal-header py-3 bg-success text-white">
+          <h5 class="modal-title">Realizar Registro</h5>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+          <input type="input" class="form-control" placeholder="Nombre" id="regName" required>
+          </div>            
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" placeholder="Dirección email" id="regEmail" required>
+          </div>
+          <div id="divStreet" class="form-group">
+            <label for="street">Calle</label>
+            <input type="input" class="form-control" placeholder="Nombre de la Calle" id="regStreet" required>    
+
+            <div id="calles" class="collapse dropdown-menu ml-3 pl-2 mt-4 bg-light">
+              <p id="p1" class="mt-1 mb-0"></p>
+              <div id="pd1" class="dropdown-divider"></div>
+              <p id="p2" class="mt-1 mb-0"></p>
+              <div id="pd2" class="dropdown-divider"></div>
+              <p id="p3" class="mt-1 mb-0"></p>
+              <div id="pd3" class="dropdown-divider"></div>              
+            </div>
+            
+          </div>
+          <div class="form-row pb-2">
+              <div class="col form-group">
+                <label for="streetNum">Número</label>
+                <input type="input" class="form-control w-50" id="regNum" required>
+              </div>
+              <div class="col form-group">
+                <label for="Piso">Piso</label>
+                <input type="input" class="form-control w-50" id="regPiso">    
+              </div>
+              <div class="col form-group">
+                <label for="Puerta">Puerta</label>
+                <input type="input" class="form-control w-50" id="regPuerta">  
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Contraseña</label>
+            <input type="password" class="form-control" placeholder="Contraseña" id="regPwd" required>
+            <div id="validPsw">
+              <p id="validLen" class="my-0 text-danger">
+                <i class="fa fa-close"></i>
+                <small>Debe contener, al menos, 8 caracteres.</small>
+              </p>              
+              <p id="validLow" class="my-0 text-danger">
+                <i class="fa fa-close"></i>
+                <small>Debe contener, al menos, una letra minúscula.</small>
+              </p>
+              <p id="validCap" class="my-0 text-danger">
+                <i class="fa fa-close"></i>
+                <small>Debe contener, al menos, una letra mayúscula.</small>
+              </p>
+              <p id="validNum" class="my-0 text-danger">
+                <i class="fa fa-close"></i>
+                <small>Debe contener, al menos, un número.</small>
+              </p>
+            </div>            
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button id="realizarRegistro" class="btn btn-primary">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Articulo Modal -->
+  <div class="modal fade" id="artModal">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
+      <div id="modContent" class="modal-content h-75">
+      
+        <!-- Modal Header -->
+        <div class="modal-header py-3 bg-success text-white">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul class="list-group">
+          </ul>
+          <button id="allIngred" type="button" class="btn btn-secondary btn-block mt-2">Añadir ingrediente</button>
+        </div>
+        <div class="modal-footer">
+          <div class="row d-flex d-inline-flex w-100">
+            <div class="col mw-fit">
+              <select class="custom-select" id="selCantidad">
+                <option value=1 selected="selected">1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>                
+              </select>
+            </div>
+            <div class="col">
+              <select class="custom-select" id="selTamanio">
+                <option value=1 selected="selected">Baguette</option>
+                <option value=2>Montadito</option>
+              </select>
+            </div>            
+            <div class="col align-self-end">
+              <h6>Precio: <span class="badge badge-primary"></span></h6>
+            </div>                       
+          </div>
+          <button id="addCarrito" type="button" class="btn btn-success btn-block mt-1 mb-0"><h5 class="mt-2">Añadir carrito</h5></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The Ingredients Modal -->
+  <div class="modal fade" id="ingModal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div id="modContent" class="modal-content h-75">
+      
+        <!-- Modal Header -->
+        <div class="modal-header py-3 bg-success text-white">
+          <h5 class="modal-title">Ingredientes:</h5>
+          <button id="closeIngModal" type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table id="tabIngre" class="table">
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button id="addIngred" type="button" class="btn btn-secondary btn-block mt-2">Añadir ingrediente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The Salsas Modal -->
+  <div class="modal fade" id="salsasModal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div id="modContent" class="modal-content h-50">
+      
+        <!-- Modal Header -->
+        <div class="modal-header py-3 bg-success text-white">
+          <h5 class="modal-title">Salsas:</h5>
+          <button id="closeSalsasModal" type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table id="tabSalsas" class="table">
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button id="addSalsa" type="button" class="btn btn-secondary btn-block mt-2">Seleccionar salsa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Carrito Modal -->
+  <div class="modal fade" id="carritoModal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div id="modContent" class="modal-content h-75">
+      
+        <!-- Modal Header -->
+        <div class="modal-header py-3 bg-success text-white">
+          <h5 class="modal-title">Tu pedido a domicilio:</h5>
+          <button id="closeSalsasModal" type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table id="tabCarrito" class="table">           
+            <tbody>
+            </tbody>                            
+          </table>
+        </div>
+        <div class="modal-footer">
+          <h6 class="text-danger font-weight-bold">Precio Total: <span class="badge badge-secondary"></span></h6>
+          <button id="finCompra" type="button" class="btn btn-success btn-block mt-2">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+</body>
+</html>
+<script>
+  var arrCallejero = [];
+
+  $.ajax({
+    type: "GET",
+    async: false,
+    url: "docs/callejero.txt",
+    success: function(txt){
+     arrCallejero=txt.split("\n");
+    }
+  });
+
+  var arrAllIngred = [];  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      var result = JSON.parse(this.responseText);
+      for (var s in result) {
+        arrAllIngred[s] = result[s];
+      }
+    }
+  }
+  xhttp.open("GET","php/getAllIngred.php",false);
+  xhttp.send();
+
+  var objProducto = null;
+  var objCarrito = new Carrito();
+  var articulos = 0;
+  var articulo = null;
+  var txtStreet = "";
+  var upperCaseLetters = /[A-Z]/g;
+  var lowerCaseLetters = /[a-z]/g;
+  var numCase = /[0-9]/g;
+
+  $(document).ready(function(){
+    $("html").css("scroll-behavior", "smooth");
+    if($(window).innerWidth() < 576){
+      $("#head_xl").removeClass("d-flex");      
+      $("#head_xl").addClass("d-none");      
+      $("#nav_xl").addClass("d-none");
+      $("#nav_sm").removeClass("d-none");
+      $("#calles").removeClass("mt-4");
+      $("#calles").addClass("mt-5");
+    }
+
+    $(window).resize(function(){
+      if($(window).innerWidth() < 576){
+        $("#head_xl").removeClass("d-flex");      
+        $("#head_xl").addClass("d-none");      
+        $("#nav_xl").addClass("d-none");
+        $("#nav_sm").removeClass("d-none");
+        $("#calles").removeClass("mt-4");
+        $("#calles").addClass("mt-5");        
+      }else{
+        $("#head_xl").removeClass("d-none");             
+        $("#head_xl").addClass("d-flex");      
+        $("#contenedor").removeClass("small");
+        $("#nav_sm").addClass("d-none");
+        $("#nav_xl").removeClass("d-none");
+        $("#calles").removeClass("mt-5");        
+        $("#calles").addClass("mt-4");
+      }
+    });
+
+    $("#regStreet").on("keyup", function(){
+      let currentTxt = $(this).val();
+
+      if(currentTxt.length != 0){
+        txtStreet = currentTxt;
+
+        let arrStreetFil = arrCallejero.filter(value => value.toString().toLowerCase().search(currentTxt.toLowerCase()) != -1);
+
+        if((currentTxt.length >= txtStreet.length) && (arrStreetFil.length == 1)){
+          $("#p1").text(arrStreetFil[0]);
+
+          $("#p2").addClass("d-none");
+          $("#p3").addClass("d-none");
+          $("#pd2").addClass("d-none");
+          $("#pd3").addClass("d-none");          
+
+          $("#calles").collapse("show");            
+        }else if(arrStreetFil.length == 0){
+          $("#calles").collapse("hide");            
+        }else{  
+          if (arrStreetFil.length == 2){
+            $("#p1").text(arrStreetFil[0]);
+            $("#p2").text(arrStreetFil[1]);
+
+            if($("#p2").hasClass("d-none")){
+              $("#p2").removeClass("d-none");
+              $("#pd2").removeClass("d-none");
+            }
+
+            $("#p3").addClass("d-none");
+            $("#pd3").addClass("d-none");
+
+            $("#calles").collapse("show");            
+          }else if(arrStreetFil.length > 2){
+            $("#p1").text(arrStreetFil[0]);
+            $("#p2").text(arrStreetFil[1]);
+            $("#p3").text(arrStreetFil[2]);
+
+            if($("#p2").hasClass("d-none")){
+              $("#p2").removeClass("d-none");
+              $("#pd2").removeClass("d-none");
+            }
+
+            if($("#p3").hasClass("d-none")){
+              $("#p3").removeClass("d-none");
+              $("#pd3").removeClass("d-none");
+            }
+
+            $("#calles").collapse("show");          
+          }        
+        }
+      }else{
+        $("#calles").collapse("hide");
+      }
+
+    });
+
+    $("#calles > p").click(function(){
+      $("#regStreet").val($(this).text());
+
+      $("#calles").collapse("hide");
+    });
+
+    $("#regPwd").on("keyup", function(){
+      let currentTxt = $(this).val();
+
+      if(currentTxt.match(upperCaseLetters)){
+        $("#validCap").removeClass("text-danger");
+        $("#validCap").addClass("text-success");
+        $("#validCap > i").removeClass("fa-close");
+        $("#validCap > i").addClass("fa-check");        
+      }else{
+        $("#validCap").removeClass("text-success");
+        $("#validCap").addClass("text-danger");
+        $("#validCap > i").removeClass("fa-check");
+        $("#validCap > i").addClass("fa-close");                
+      }
+
+      if(currentTxt.match(lowerCaseLetters)){
+        $("#validLow").removeClass("text-danger");
+        $("#validLow").addClass("text-success");
+        $("#validLow > i").removeClass("fa-close");
+        $("#validLow > i").addClass("fa-check");        
+      }else{
+        $("#validLow").removeClass("text-success");
+        $("#validLow").addClass("text-danger");
+        $("#validLow > i").removeClass("fa-check");
+        $("#validLow > i").addClass("fa-close");                
+      }
+
+      if(currentTxt.match(numCase)){
+        $("#validNum").removeClass("text-danger");
+        $("#validNum").addClass("text-success");
+        $("#validNum > i").removeClass("fa-close");
+        $("#validNum > i").addClass("fa-check");        
+      }else{
+        $("#validNum").removeClass("text-success");
+        $("#validNum").addClass("text-danger");
+        $("#validNum > i").removeClass("fa-check");
+        $("#validNum > i").addClass("fa-close");                
+      }
+
+      if(currentTxt.length >= 8){
+        $("#validLen").removeClass("text-danger");
+        $("#validLen").addClass("text-success");
+        $("#validLen > i").removeClass("fa-close");
+        $("#validLen > i").addClass("fa-check");                
+      }else{
+        $("#validLen").removeClass("text-success");
+        $("#validLen").addClass("text-danger");
+        $("#validLen > i").removeClass("fa-check");
+        $("#validLen > i").addClass("fa-close");                        
+      }
+    });
+
+    $("#registrar").click(function(){
+      $("#regModal").modal();
+    });
+
+    $(".col-sm-12 table tr, .col-md-6 table tr").click(function(){
+      var idTr = $(this).attr("id");
+      var idProd = idTr.substring(2);
+
+      $(this).animate({opacity: "0.2"}, 200);
+      $(this).animate({opacity: "1"}, 200); 
+
+      var xmlhttp=new XMLHttpRequest();
+      xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+          objProducto = JSON.parse(this.responseText);
+          //alert(this.responseText);
+        }
+      }
+      xmlhttp.open("GET","php/getProducto.php?q="+idProd,false);
+      xmlhttp.send();
+
+      var nombre = objProducto.nombre;
+      var precio = objProducto.precio;
+      var precioUnid = precio;
+      var precioMitad = objProducto.precio_mitad;
+      var precioMin = objProducto.precio_min;
+
+      var tipo = objProducto.tipo;
+
+      var ingredientes = [];
+      var ingredOrig = [];
+
+      for (var x in objProducto.ingredientes) {
+        ingredientes[x] = objProducto.ingredientes[x];
+        ingredOrig[x] = objProducto.ingredientes[x];
+      }
+
+      articulo = new Articulo(nombre, precio, tipo, 1, 1, precioUnid, precioMitad, precioMin, ingredientes, arrAllIngred, ingredOrig);
+
+      var txt = "";
+
+      if(articulo.artIngred != null){
+        articulo.cargarAllIngred(ingredientes, arrAllIngred);  
+
+        articulo.artIngred.forEach(function(item){
+          txt += articulo.cargarLiIngred(item); 
+        });
+      }
+
+      $("#artModal .modal-title").html(articulo.artNombre);
+
+      $("#artModal .modal-body > ul").html(txt);
+
+      $("#artModal .modal-footer select").val(1);
+
+      $("#artModal .modal-footer span").html(articulo.artPrecio+"€");
+
+      $("#artModal").modal();   
+
+    });  
+
+    $("#allIngred").click(function(){
+      $("#artModal").modal("hide");
+
+      $("#ingModal").modal();
+
+      var txt = "";
+
+      articulo.sortArtAllIngred();
+
+      articulo.artAllIngred.forEach(function(item){        
+        txt += articulo.cargarTdAllIngred(item);
+      });
+
+      $("#ingModal .modal-body > table").html(txt);
+
+    });
+
+    $("#selCantidad").change(function(){
+      let cantidad = parseInt($("#selCantidad option:selected").val());
+
+      articulo.updateUnidad(cantidad);
+
+      $("#artModal .modal-footer span").html(articulo.artPrecio+"€");
+    
+    });
+
+    $("#selTamanio").change(function(){
+      let tamanio = parseInt($("#selTamanio option:selected").val());
+      let nombre = $("#selTamanio option:selected").text();
+
+      articulo.updateTamanio(tamanio, nombre);
+
+      $("#artModal .modal-footer span").html(articulo.artPrecio+"€");
+    
+    });
+
+  });
+
+  $("#regStreet").on("change", function(){
+
+    $("#calles").collapse("show");
+  });
+
+  $(document).on('click', '#tabIngre tr', function(){
+    $(this).toggleClass("bg-primary text-white font-weight-bold");
+  });
+
+  $(document).on('click', '#addIngred', function(){
+    $("#tabIngre .bg-primary").each(function(){
+      var ingrediente = null;
+      
+      ingrediente = articulo.getAllIngrediente($(this).find("td:first").html());
+
+      articulo.addToIngred(ingrediente);
+
+      articulo.updatePrecio(ingrediente.suplemento, "suma");
+
+    });
+
+    var txt = "";
+
+    if(articulo.artIngred != null){
+      articulo.cargarAllIngred(articulo.artIngred, articulo.artAllIngred);
+
+      articulo.artIngred.forEach(function(item){
+        txt += articulo.cargarLiIngred(item); 
+      });
+    }
+
+    $("#artModal .modal-body > ul").html(txt);
+
+    $("#artModal .modal-footer span").html(articulo.artPrecio+"€");
+
+    $("#ingModal").modal("hide");
+
+    $("#artModal").modal();
+  });
+
+  $(document).on('click', '#artModal li button', function(){
+    var nombre = "";
+    var ingrediente = null;
+    var bagCriminal = "Baguette Criminal";
+      
+    nombre = $(this).closest('li').text();
+
+    ingrediente = articulo.getIngrediente(nombre.slice(0, nombre.length - 1));    
+
+    articulo.removeFromIngred(ingrediente);
+
+    articulo.addToAllIngred(ingrediente);
+
+    if(articulo.artNombre == bagCriminal && ingrediente.nombre.includes("Salsa")){
+      let salsaElegir = articulo.getAllIngrediente("Salsa a elegir");
+
+      articulo.removeFromAllIngred(salsaElegir);
+
+      articulo.addToIngred(salsaElegir);
+
+    }else{
+      articulo.updatePrecio(ingrediente.suplemento, "resta");
+    }
+
+    var txt = "";
+
+    articulo.artIngred.forEach(function(item){
+      txt += articulo.cargarLiIngred(item); 
+    });
+
+    $("#artModal .modal-body > ul").html(txt);
+
+    $("#artModal .modal-footer span").html(articulo.artPrecio+"€");
+
+  });
+
+  $("#ingModal, #salsasModal").on('hidden.bs.modal', function(){
+    $("#artModal").modal();
+  });
+
+  $(document).on('click', '#salsaEligir', function(){
+    $(this).animate({opacity: "0.2"}, 200);
+    $(this).animate({opacity: "1"}, 200);
+
+    let salsas;
+
+    salsas = arrAllIngred.filter(item => item.nombre.includes("Salsa"));
+
+    let txt = "";
+
+    salsas.forEach(function(item){
+      if(item.nombre != "Salsa a elegir"){
+        txt += "<tr><td class='d-flex flex-fill px-1 py-3 text-left'>"+item.nombre+"</td></tr>";
+      }
+    });
+
+    $("#salsasModal .modal-body > table").html(txt);
+
+    $("#salsasModal").modal();
+
+  });
+
+  $(document).on('click', '#tabSalsas tr', function(){
+    $("#tabSalsas .bg-primary").each(function(){
+      $(this).toggleClass("bg-primary text-white font-weight-bold");    
+    });  
+
+    $(this).toggleClass("bg-primary text-white font-weight-bold");
+  });
+
+  $(document).on('click', '#addSalsa', function(){
+    var salsa = null;
+    var salsaElegir = articulo.getIngrediente("Salsa a elegir");
+
+    $("#tabSalsas .bg-primary").each(function(){
+      salsa = articulo.getAllIngrediente($(this).find("td:first").html());
+
+      articulo.removeFromIngred(salsaElegir);
+
+      articulo.addToAllIngred(salsaElegir);
+
+      articulo.addToIngred(salsa);
+
+      articulo.removeFromAllIngred(salsa);
+
+    });
+
+    var txt = "";
+
+    articulo.artIngred.forEach(function(item){
+      txt += articulo.cargarLiIngred(item); 
+    });
+
+    $("#artModal .modal-body > ul").html(txt);
+
+    $("#salsasModal").modal("hide");
+
+  });
+
+  $(document).on('click', '#addCarrito', function(){
+    $("#artModal").modal("hide");
+    articulo.checkAddedAndRemoved();
+    objCarrito.addArticulo(articulo);
+
+    $("#carritoXL span, #carritoSM span").text(objCarrito.carNumArticulos);
+
+  });
+
+  $(document).on('click', '#carritoXL, #carritoSM', function(){
+    if(objCarrito.carArticulo.length != 0){
+      let txt = "";
+
+      objCarrito.carArticulo.forEach(function(item){
+        txt += objCarrito.showArticulo(item);
+      });
+
+      $("#carritoModal .modal-body > table > tbody").html(txt);
+
+      $("#carritoModal .modal-footer span").html(objCarrito.carPrecioTotal.toFixed(2));
+
+      $("#carritoModal").modal();
+    }
+
+  });
+
+  $(document).on('click', '#removeArticuloCarrito', function(){
+    objCarrito.removeArticulo($(this).parent().index());
+
+    var txt = "";
+
+    if(objCarrito.carArticulo.length != 0){
+      objCarrito.carArticulo.forEach(function(item){
+        txt += objCarrito.showArticulo(item);
+      });
+
+    }
+
+    $("#carritoXL span, #carritoSM span").text(objCarrito.carNumArticulos);
+
+    $("#carritoModal .modal-body > table > tbody").html(txt);
+
+    $("#carritoModal .modal-footer span").html(objCarrito.carPrecioTotal.toFixed(2));
+
+  });
+
+</script>
